@@ -1,11 +1,18 @@
-import random 
+import random
 from words import words
 
-### Choose a random word
-randomWord = random.choice(words)
 
-for x in randomWord:
-    print('_', end=' ')
+def get_word():
+    """ 
+    Get a random word and return
+    """
+    randomWord = random.choice(words)
+    return randomWord.upper()
+
+
+# for x in randomWord:
+#     print('_', end=' ')
+
 
 def print_hangman(wrong):
     """
