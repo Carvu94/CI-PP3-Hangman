@@ -64,9 +64,6 @@ def play(random_word):
     else:
         print(f'Sorry, you ran out of tries. The word was {random_word}. Better luck next time!')
 
-# for x in randomWord:
-#     print('_', end=' ')
-
 
 def print_hangman(lives):
     """
@@ -116,10 +113,25 @@ def print_hangman(lives):
         print('     ===')
 
 
+def print_title():
+    """
+    Fucntion to print the title 
+    """
+    print("   _______ _            _    _")                                         
+    print("  |__   __| |          | |  | |")                                        
+    print("     | |  | |__   ___  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __")  
+    print("     | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ ") 
+    print("     | |  | | | |  __/ | |  | | (_| | | | | (_| | | | | | | (_| | | | |")
+    print("     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
+    print("                                            __/ |")                      
+    print("                                           |___/ ")
+
+
 def main():
     """
     Function that runs all functions and offer user to choose to play again. 
     """
+    print_title()
     random_word = get_word()
     play(random_word)
     while input('Play again? (Y/N) ').upper() == 'Y':
