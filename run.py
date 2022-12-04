@@ -1,23 +1,23 @@
 import random
-# from words import words
-import json
+from words import words
+# import json
 
 
-def get_word():
-    """Get a random word and return
-
-    Returns:
-        string, random word
-    """
-    with open("words.json", "r") as f:
-        word = json.load(f)
-    return random.choice(word).upper()
 # def get_word():
-#     """ 
-#     Get a random word and return
+#     """Get a random word and return
+
+#     Returns:
+#         string, random word
 #     """
-#     random_word = random.choice(words)
-#     return random_word.upper()
+#     with open("words.json", "r") as f:
+#         word = json.load(f)
+#     return random.choice(word).upper()
+def get_word():
+    """ 
+    Get a random word and return
+    """
+    random_word = random.choice(words)
+    return random_word.upper()
 
 
 def play(random_word):
@@ -33,7 +33,7 @@ def play(random_word):
     lives = 6
     print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
-    print(print_hangman(lives))
+    print_hangman(lives)
     print(word_to_guess)
     print('\n')
     while not guessed and lives > 0:
