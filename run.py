@@ -33,7 +33,7 @@ def play(random_word):
     lives = 6
     # print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
-    print_hangman(lives)
+    print(print_hangman(lives))
     print(word_to_guess)
     print('\n')
     while not guessed and lives > 0:
@@ -67,7 +67,7 @@ def play(random_word):
                 word_to_guess = random_word
         else:
             print('Not a valid guess')
-        print_hangman(lives)
+        print(print_hangman(lives))
         print(word_to_guess)
         print('\n')
     if guessed:
@@ -78,51 +78,60 @@ def play(random_word):
 
 def print_hangman(lives):
     """
-    Prints hangman depending on number of wrong guesses
+    Displays hangman depending on number of wrong guesses
     """
-    if(lives == 6):
-        print('\n|----+')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('    ===')
-    elif(lives == 5):
-        print('\n|----+')
-        print('O    |')
-        print('     |')
-        print('     |')
-        print('    ===')
-    elif(lives == 4):
-        print('\n|----+')
-        print('O    |')
-        print('|    |')
-        print('     |')
-        print('    ===')
-    elif(lives == 3):
-        print('\n |----+')
-        print(' O    |')
-        print('/|    |')
-        print('      |')
-        print('     ===')
-    elif(lives == 2):
-        print('\n |----+')
-        print(' O    |')
-        print('/|\   |')
-        print('      |')
-        print('     ===')
-    elif(lives == 1):
-        print('\n |----+')
-        print(' O    |')
-        print('/|\   |')
-        print('/     |')
-        print('     ===')
-    elif(lives == 0):
-        print('\n |----+')
-        print(' O    |')
-        print('/|\   |')
-        print('/ \   |')
-        print('     ===')
-
+    lives_left = [
+        """ 
+         |----+
+         O    |
+        /|\   |
+        / \   |
+             ===    
+        """,
+        """
+         |----+
+         O    |
+        /|\   |
+        /     |
+             ===
+        """,
+        """
+         |----+
+         O    |
+        /|\   |
+              |
+             ===
+        """,
+        """
+         |----+
+         O    |
+        /|    |
+              |
+             ===
+        """,
+        """
+        |----+
+        O    |
+        |    |
+             |
+            ===
+        """,
+        """
+        |----+
+        O    |
+             |
+             |
+            ===
+        """,
+        """
+        |----+
+             |
+             |
+             |
+            ===
+        """
+    ]
+    return lives_left[lives]
 
 def print_title():
     """
