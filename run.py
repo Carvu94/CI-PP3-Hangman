@@ -16,11 +16,12 @@ def play(random_word):
     Prints welcome message, hangman and word to guess
     Checks if guess is correct and returns appropriate message
     """
-    word_to_guess = '_ ' * len(random_word)
+    word_to_guess = ('_ ' * len(random_word)).rstrip()
     guessed = False
     guessed_letters = []
     guessed_words = []
     lives = 6
+    print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
     print(word_to_guess)
