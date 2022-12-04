@@ -1,13 +1,23 @@
 import random
-from words import words
+# from words import words
+import json
 
 
 def get_word():
-    """ 
-    Get a random word and return
+    """Get a random word and return
+
+    Returns:
+        string, random word
     """
-    random_word = random.choice(words)
-    return random_word.upper()
+    with open("words.json", "r") as f:
+        word = json.load(f)
+    return random.choice(word).upper()
+# def get_word():
+#     """ 
+#     Get a random word and return
+#     """
+#     random_word = random.choice(words)
+#     return random_word.upper()
 
 
 def play(random_word):
