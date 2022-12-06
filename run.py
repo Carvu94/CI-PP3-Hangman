@@ -92,6 +92,7 @@ def play(random_word):
     # print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
+    print(f'You have {lives} lives left')
     print(word_to_guess)
     print('\n')
     while not guessed and lives > 0:
@@ -103,9 +104,11 @@ def play(random_word):
                 print(f'Letter {guess} is not in the word. Try again.')
                 lives -= 1
                 guessed_letters.append(guess)
+                print(f'You have already guessed: {guessed_letters}')
             else:
                 print(f'Amazing! {guess} is in the word!')
                 guessed_letters.append(guess)
+                print(f'You have already guessed: {guessed_letters}')
                 word_list = list(word_to_guess)
                 indices = [i for i, letter in enumerate(random_word) if letter == guess]
                 for index in indices:
