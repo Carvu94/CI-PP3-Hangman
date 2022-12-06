@@ -19,6 +19,20 @@ def game_intro():
             print(f'Welcome, {name}! Are you ready to be hanged?')
             break
 
+
+def game_rules():
+    """
+    Prints the game rules to the user
+    """
+    print('How to play:')
+    print('This is a guess word game.')
+    print('Guess one letter at a time or whole word if you feel lucky.')
+    print('If your guess is wrong, you loose a life.')
+    print('When you reach 0 lives, I win and you will be hanged!')
+    print('If you guess all letters or a word correctly, you win!')
+    print('Good luck!')
+    
+    
 # def get_word():
 #     """Get a random word and return
 
@@ -167,7 +181,7 @@ def main():
     """
     Function that runs all functions and offer user to choose to play again. 
     """
-    print_title()
+    game_intro()
     random_word = get_word()
     play(random_word)
     while input('Play again? (Y/N) ').upper() == 'Y':
