@@ -3,6 +3,22 @@ from words import words
 # import json
 
 
+def game_intro():
+    """
+    Game intro function that prints the title art and 
+    welcomes the user, request the name and print Welcome name.
+    """
+    print_title()
+    while True:
+        name = input('Please enter your name:\n')
+
+        if not name.isalpha():
+            print('Please enter your name using letters only.\n')
+            continue
+        else:
+            print(f'Welcome, {name}! Are you ready to be hanged?')
+            break
+
 # def get_word():
 #     """Get a random word and return
 
