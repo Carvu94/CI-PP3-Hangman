@@ -20,6 +20,34 @@ def game_intro():
             break
 
 
+def initialise_game(random_word):
+    """
+    Function that offers a user two choices:
+    1. play the game
+    2. read the rules
+
+    Args:
+        random_word (string): generates a random word to play the game
+
+    Returns:
+        _type_: _description_
+    """
+    print('Press P to play the game')
+    print('Press R to view the rules of the game.')
+    start = False
+    while not start:
+        choice = input(('\n')).upper()
+        if choice == 'P':
+            start = True
+            play(random_word)
+        elif choice == 'R':
+            game_rules()
+            input('Please press Enter to return to the Menu\n')
+            return initialise_game(random_word)
+        else:
+            print('Please make a valid choice.')
+
+
 def game_rules():
     """
     Prints the game rules to the user
@@ -32,7 +60,7 @@ def game_rules():
     print('If you guess all letters or a word correctly, you win!')
     print('Good luck!')
     
-    
+
 # def get_word():
 #     """Get a random word and return
 
@@ -183,7 +211,7 @@ def main():
     """
     game_intro()
     random_word = get_word()
-    play(random_word)
+    initialise_game(random_word)
     while input('Play again? (Y/N) ').upper() == 'Y':
         random_word = get_word()
         play(random_word)
