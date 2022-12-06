@@ -130,8 +130,10 @@ def play(random_word):
         print('\n')
     if guessed:
         print('Congratulations! You guessed the word! You win!')
+        you_win()
     else:
         print(f'Sorry, you ran out of tries. The word was {random_word}. Better luck next time!')
+        game_over()
 
 
 def print_hangman(lives):
@@ -191,6 +193,7 @@ def print_hangman(lives):
     ]
     return lives_left[lives]
 
+
 def print_title():
     """
     Fucntion to print the title 
@@ -203,6 +206,32 @@ def print_title():
     print("     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
     print("                                            __/ |")                      
     print("                                           |___/ ")
+
+
+def you_win():
+    """
+    Function to print You Win when user wins the game
+    """
+    print("    __   __            _    _ _")
+    print("    \ \ / /           | |  | (_)")
+    print("     \ V /___  _   _  | |  | |_ _ __")
+    print("      \ // _ \| | | | | |/\| | | '_ \ ")
+    print("      | | (_) | |_| | \  /\  / | | | |")
+    print("      \_/\___/ \__,_|  \/  \/|_|_| |_|")
+    print("\n")
+
+
+def game_over():
+    """
+    Function to print Game Over when user loose the game
+    """
+    print("     _____                        _____")
+    print("    |  __ \                      |  _  |")
+    print("    | |  \/ __ _ _ __ ___   ___  | | | |_   _____ _ __")
+    print("    | | __ / _` | '_ ` _ \ / _ \ | | | \ \ / / _ \ '__|")
+    print("    | |_\ \ (_| | | | | | |  __/ \ \_/ /\ V /  __/ |")
+    print("     \____/\__,_|_| |_| |_|\___|  \___/  \_/ \___|_|")
+    print("\n")
 
 
 def main():
