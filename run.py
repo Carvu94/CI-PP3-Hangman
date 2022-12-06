@@ -88,7 +88,7 @@ def play(random_word):
     guessed = False
     guessed_letters = []
     guessed_words = []
-    lives = 6
+    lives = 10
     # print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
@@ -189,7 +189,35 @@ def print_hangman(lives):
          |
          |
         ===
+        """,
         """
+       --+
+         |
+         |
+         |
+        ===
+        """,
+        """
+         +
+         |
+         |
+         |
+        ===
+        """,
+        """
+         
+         
+         |
+         |
+        ===
+        """,
+        """
+         
+         
+         
+         
+        ===
+        """,
     ]
     return lives_left[lives]
 
