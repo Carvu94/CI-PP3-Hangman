@@ -100,11 +100,13 @@ def play(random_word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f'You already guessed letter {guess}')
+                # print(f'You have {lives} lives left')
             elif guess not in random_word:
                 print(f'Letter {guess} is not in the word. Try again.')
                 lives -= 1
                 guessed_letters.append(guess)
                 print(f'You have already guessed: {guessed_letters}')
+                # print(f'You have {lives} lives left')
             else:
                 print(f'Amazing! {guess} is in the word!')
                 guessed_letters.append(guess)
@@ -129,6 +131,7 @@ def play(random_word):
         else:
             print('Not a valid guess')
         print(print_hangman(lives))
+        print(f'You have {lives} lives left')
         print(word_to_guess)
         print('\n')
     if guessed:
