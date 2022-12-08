@@ -174,6 +174,7 @@ def play(random_word):
             f" You guessed the word! You win!{Colors.RESET}"
         )
         you_win()
+        play_again()
     else:
         os.system('clear')
         print(
@@ -182,6 +183,7 @@ def play(random_word):
             f" Better luck next time!{Colors.RESET}"
         )
         game_over()
+        play_again()
 
 
 def play_again():
@@ -190,13 +192,16 @@ def play_again():
     if user enter Y, new random word is generated and game starts.
     if user enter N, thank you message is displayed and program exit
     """
-    if input("Play again? (Y/N)").upper() == "Y":
-        random_word = get_word()
-        play(random_word)
-    else:
-        sleep(0.5)
-        print("Thank you for playing!")
-        exit()
+    while True:
+        choice = input("Play again? (Y/N): ").upper()
+        if choice == "Y":
+            random_word = get_word()
+            play(random_word)
+        elif choice == "N":
+            print("Thank you for playing!")
+            exit()
+        else:
+            print("Please choose Y or N.")
 
 
 def print_hangman(lives):
@@ -362,7 +367,7 @@ def main():
     game_intro()
     random_word = get_word()
     initialise_game(random_word)
-    play_again()
+    # play_again()
     # while input("Play again? (Y/N) ").upper() == "Y":
     #     random_word = get_word()
     #     play(random_word)
