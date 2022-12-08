@@ -1,4 +1,6 @@
 import random
+import os
+from time import sleep
 from words import words
 
 # import json
@@ -27,6 +29,7 @@ def game_intro():
             )
             continue
         else:
+            sleep(0.5)
             print(f"Welcome, {name}! Are you ready to be hanged?")
             break
 
@@ -57,6 +60,8 @@ def initialise_game(random_word):
                 f"{colors.GREEN}Please press Enter"
                 f" to return to the Menu\n{colors.RESET}"
             )
+            os.system('clear')
+            print_title()
             return initialise_game(random_word)
         else:
             print("Please make a valid choice.")
@@ -103,6 +108,7 @@ def play(random_word):
     guessed_letters = []
     guessed_words = []
     lives = 10
+    os.system('clear')
     print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
@@ -112,9 +118,11 @@ def play(random_word):
     while not guessed and lives > 0:
         guess = input("Please guess a letter or a word: ").upper()
         if len(guess) == 1 and guess.isalpha():
+            os.system('clear')
             if guess in guessed_letters:
                 print(f"You already guessed letter {guess}")
             elif guess not in random_word:
+                os.system('clear')
                 print(
                     f"{colors.RED}Letter {guess}"
                     f" is not in the word. Try again.{colors.RESET}"
@@ -123,6 +131,7 @@ def play(random_word):
                 guessed_letters.append(guess)
                 print(f"You have already guessed: {guessed_letters}")
             else:
+                os.system('clear')
                 print(f"{colors.GREEN}Amazing! {guess}"
                       f" is in the word!{colors.RESET}")
                 guessed_letters.append(guess)
@@ -135,9 +144,11 @@ def play(random_word):
                 if "_" not in word_to_guess:
                     guessed = True
         elif len(guess) == len(random_word) and guess.isalpha():
+            os.system('clear')
             if guess in guessed_words:
                 print(f"You already guessed the word {guess}")
             elif guess != random_word:
+                os.system('clear')
                 print(f"{colors.RED}{guess} is not the word.{colors.RESET}")
                 lives -= 1
                 guessed_words.append(guess)
@@ -145,18 +156,21 @@ def play(random_word):
                 guessed = True
                 word_to_guess = random_word
         else:
+            os.system('clear')
             print(f"{colors.RED}Not a valid guess{colors.RESET}")
         print(print_hangman(lives))
         print(f"{colors.GREEN}You have {lives} lives left{colors.RESET}")
         print(word_to_guess)
         print("\n")
     if guessed:
+        os.system('clear')
         print(
             f"{colors.GREEN}Congratulations!"
             f" You guessed the word! You win!{colors.RESET}"
         )
         you_win()
     else:
+        os.system('clear')
         print(
             f"{colors.RED}Sorry, you ran out of tries."
             f" The word was {random_word}."
