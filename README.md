@@ -1,19 +1,18 @@
 # THE HANGMAN
 
 (Developer: Matej Car)
+The Hangman is Python terminal game, which runs in the Code Institute mock terminal on Heroku.
+Users can try to guess the word by inputting a letter or whole word until they either guess the word or lose all lives. 
+Users have 10 tries to guess the word before they are "hanged"..
 
 [THE HANGMAN >>> Live live website ]()
 
-
-## About
-
-
 ## Table of Contents
 
-## Project Goals
+## How to play
 <hr>
 
-- 
+Users play Hanfman by inputting commands in terminal. The aim of the game is to guess the hidden word. Hidden word is represented with underscores to indicate how many letters are in word. When user guess the letter correctly, the underscore is replaced with the correct letter. The user has 10 lives to start with and each stage is represented with graphics of a hangman. When the user guesses the word or looses all lives there is a option to play again. 
 
 ### User Goals
 
