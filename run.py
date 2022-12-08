@@ -112,7 +112,7 @@ def play(random_word):
     guessed_words = []
     lives = 10
     os.system('clear')
-    print(random_word)
+    # print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
     print(f"{Colors.GREEN}You have {lives} lives left{Colors.RESET}")
@@ -367,10 +367,6 @@ def main():
     game_intro()
     random_word = get_word()
     initialise_game(random_word)
-    # play_again()
-    # while input("Play again? (Y/N) ").upper() == "Y":
-    #     random_word = get_word()
-    #     play(random_word)
 
 
 if __name__ == "__main__":
