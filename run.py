@@ -124,7 +124,8 @@ def play(random_word):
             os.system('clear')
             if guess in guessed_letters:
                 print(f"You already guessed letter {guess}")
-                print(f"You have already guessed: {guessed_letters}")
+                print(f"You have already guessed: "
+                      f"{', '.join(str(x) for x in guessed_letters)}")
             elif guess not in random_word:
                 os.system('clear')
                 print(
@@ -133,13 +134,15 @@ def play(random_word):
                 )
                 lives -= 1
                 guessed_letters.append(guess)
-                print(f"You have already guessed: {guessed_letters}")
+                print(f"You have already guessed: "
+                      f"{', '.join(str(x) for x in guessed_letters)}")
             else:
                 os.system('clear')
                 print(f"{Colors.GREEN}Amazing! {guess}"
                       f" is in the word!{Colors.RESET}")
                 guessed_letters.append(guess)
-                print(f"You have already guessed: {guessed_letters}")
+                print(f"You have already guessed: "
+                      f"{', '.join(str(x) for x in guessed_letters)}")
                 word_list = list(word_to_guess)
                 indices = [i for i, letter in enumerate(random_word) if letter == guess]
                 for index in indices:
@@ -150,7 +153,8 @@ def play(random_word):
         elif len(guess) == len(random_word) and guess.isalpha():
             os.system('clear')
             if guess in guessed_words:
-                print(f"You already guessed the word {guess}")
+                print(f"You have already guessed: "
+                      f"{', '.join(str(x) for x in guessed_letters)}")
             elif guess != random_word:
                 os.system('clear')
                 print(f"{Colors.RED}{guess} is not the word.{Colors.RESET}")
@@ -162,7 +166,8 @@ def play(random_word):
         else:
             os.system('clear')
             print(f"{Colors.RED}Not a valid guess{Colors.RESET}")
-            print(f"You have already guessed: {guessed_letters}")
+            print(f"You have already guessed: "
+                  f"{', '.join(str(x) for x in guessed_letters)}")
         print(print_hangman(lives))
         print(f"{Colors.GREEN}You have {lives} lives left{Colors.RESET}")
         print(word_to_guess)
