@@ -184,6 +184,21 @@ def play(random_word):
         game_over()
 
 
+def play_again():
+    """
+    Function that offers a user to play the game again.
+    if user enter Y, new random word is generated and game starts.
+    if user enter N, thank you message is displayed and program exit
+    """
+    if input("Play again? (Y/N)").upper() == "Y":
+        random_word = get_word()
+        play(random_word)
+    else:
+        sleep(0.5)
+        print("Thank you for playing!")
+        exit()
+
+
 def print_hangman(lives):
     """
     Displays hangman depending on number of wrong guesses
@@ -347,9 +362,10 @@ def main():
     game_intro()
     random_word = get_word()
     initialise_game(random_word)
-    while input("Play again? (Y/N) ").upper() == "Y":
-        random_word = get_word()
-        play(random_word)
+    play_again()
+    # while input("Play again? (Y/N) ").upper() == "Y":
+    #     random_word = get_word()
+    #     play(random_word)
 
 
 if __name__ == "__main__":
