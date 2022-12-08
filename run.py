@@ -6,7 +6,10 @@ from words import words
 # import json
 
 
-class colors:
+class Colors:
+    """
+    Colors class to give a colour to printed text/art
+    """
     RED = "\033[1;31m"
     GREEN = "\033[0;32m"
     CYAN = "\033[1;36m"
@@ -24,8 +27,8 @@ def game_intro():
 
         if not name.isalpha():
             print(
-                f"{colors.RED}Please enter your name"
-                f" using letters only.\n {colors.RESET}"
+                f"{Colors.RED}Please enter your name"
+                f" using letters only.\n {Colors.RESET}"
             )
             continue
         else:
@@ -57,8 +60,8 @@ def initialise_game(random_word):
         elif choice == "R":
             game_rules()
             input(
-                f"{colors.GREEN}Please press Enter"
-                f" to return to the Menu\n{colors.RESET}"
+                f"{Colors.GREEN}Please press Enter"
+                f" to return to the Menu\n{Colors.RESET}"
             )
             os.system('clear')
             print_title()
@@ -112,7 +115,7 @@ def play(random_word):
     print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
-    print(f"{colors.GREEN}You have {lives} lives left{colors.RESET}")
+    print(f"{Colors.GREEN}You have {lives} lives left{Colors.RESET}")
     print(word_to_guess)
     print("\n")
     while not guessed and lives > 0:
@@ -125,16 +128,16 @@ def play(random_word):
             elif guess not in random_word:
                 os.system('clear')
                 print(
-                    f"{colors.RED}Letter {guess}"
-                    f" is not in the word. Try again.{colors.RESET}"
+                    f"{Colors.RED}Letter {guess}"
+                    f" is not in the word. Try again.{Colors.RESET}"
                 )
                 lives -= 1
                 guessed_letters.append(guess)
                 print(f"You have already guessed: {guessed_letters}")
             else:
                 os.system('clear')
-                print(f"{colors.GREEN}Amazing! {guess}"
-                      f" is in the word!{colors.RESET}")
+                print(f"{Colors.GREEN}Amazing! {guess}"
+                      f" is in the word!{Colors.RESET}")
                 guessed_letters.append(guess)
                 print(f"You have already guessed: {guessed_letters}")
                 word_list = list(word_to_guess)
@@ -150,7 +153,7 @@ def play(random_word):
                 print(f"You already guessed the word {guess}")
             elif guess != random_word:
                 os.system('clear')
-                print(f"{colors.RED}{guess} is not the word.{colors.RESET}")
+                print(f"{Colors.RED}{guess} is not the word.{Colors.RESET}")
                 lives -= 1
                 guessed_words.append(guess)
             else:
@@ -158,25 +161,25 @@ def play(random_word):
                 word_to_guess = random_word
         else:
             os.system('clear')
-            print(f"{colors.RED}Not a valid guess{colors.RESET}")
+            print(f"{Colors.RED}Not a valid guess{Colors.RESET}")
             print(f"You have already guessed: {guessed_letters}")
         print(print_hangman(lives))
-        print(f"{colors.GREEN}You have {lives} lives left{colors.RESET}")
+        print(f"{Colors.GREEN}You have {lives} lives left{Colors.RESET}")
         print(word_to_guess)
         print("\n")
     if guessed:
         os.system('clear')
         print(
-            f"{colors.GREEN}Congratulations!"
-            f" You guessed the word! You win!{colors.RESET}"
+            f"{Colors.GREEN}Congratulations!"
+            f" You guessed the word! You win!{Colors.RESET}"
         )
         you_win()
     else:
         os.system('clear')
         print(
-            f"{colors.RED}Sorry, you ran out of tries."
+            f"{Colors.RED}Sorry, you ran out of tries."
             f" The word was {random_word}."
-            f" Better luck next time!{colors.RESET}"
+            f" Better luck next time!{Colors.RESET}"
         )
         game_over()
 
@@ -271,31 +274,31 @@ def print_title():
     """
     Fucntion to print the title
     """
-    print(f"{colors.CYAN}   _______ _            _    _{colors.RESET}")
-    print(f"{colors.CYAN}  |__   __| |          | |  | |")
+    print(f"{Colors.CYAN}   _______ _            _    _{Colors.RESET}")
+    print(f"{Colors.CYAN}  |__   __| |          | |  | |")
     print(
-        f"{colors.CYAN}     | |  | |__   ___  | |__| | __ _ _ __   __ _ _ __ "
-        f"___   __ _ _ __{colors.RESET}"
+        f"{Colors.CYAN}     | |  | |__   ___  | |__| | __ _ _ __   __ _ _ __ "
+        f"___   __ _ _ __{Colors.RESET}"
     )
     print(
-        f"{colors.CYAN}     | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ ` "
-        f"_ \ / _` | '_ \ {colors.RESET}"
+        f"{Colors.CYAN}     | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ ` "
+        f"_ \ / _` | '_ \ {Colors.RESET}"
     )
     print(
-        f"{colors.CYAN}     | |  | | | |  __/ | |  | | (_| | | | | (_| | | | "
-        f"| | | (_| | | | |{colors.RESET}"
+        f"{Colors.CYAN}     | |  | | | |  __/ | |  | | (_| | | | | (_| | | | "
+        f"| | | (_| | | | |{Colors.RESET}"
     )
     print(
-        f"{colors.CYAN}     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_"
-        f"| |_|\__,_|_| |_|{colors.RESET}"
+        f"{Colors.CYAN}     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_"
+        f"| |_|\__,_|_| |_|{Colors.RESET}"
     )
     print(
-        f"{colors.CYAN}                                            __/ "
-        f"|{colors.RESET}"
+        f"{Colors.CYAN}                                            __/ "
+        f"|{Colors.RESET}"
     )
     print(
-        f"{colors.CYAN}                                           |___"
-        f"/ {colors.RESET}"
+        f"{Colors.CYAN}                                           |___"
+        f"/ {Colors.RESET}"
     )
 
 
@@ -303,12 +306,12 @@ def you_win():
     """
     Function to print You Win when user wins the game
     """
-    print(f"{colors.GREEN}__   __            _    _ _{colors.RESET}")
-    print(f"{colors.GREEN}\ \ / /           | |  | (_){colors.RESET}")
-    print(f"{colors.GREEN} \ V /___  _   _  | |  | |_ _ __{colors.RESET}")
-    print(f"{colors.GREEN}  \ // _ \| | | | | |/\| | | '_ \ {colors.RESET}")
-    print(f"{colors.GREEN}  | | (_) | |_| | \  /\  / | | | |{colors.RESET}")
-    print(f"{colors.GREEN}  \_/\___/ \__,_|  \/  \/|_|_| |_|{colors.RESET}")
+    print(f"{Colors.GREEN}__   __            _    _ _{Colors.RESET}")
+    print(f"{Colors.GREEN}\ \ / /           | |  | (_){Colors.RESET}")
+    print(f"{Colors.GREEN} \ V /___  _   _  | |  | |_ _ __{Colors.RESET}")
+    print(f"{Colors.GREEN}  \ // _ \| | | | | |/\| | | '_ \ {Colors.RESET}")
+    print(f"{Colors.GREEN}  | | (_) | |_| | \  /\  / | | | |{Colors.RESET}")
+    print(f"{Colors.GREEN}  \_/\___/ \__,_|  \/  \/|_|_| |_|{Colors.RESET}")
     print("\n")
 
 
@@ -316,23 +319,23 @@ def game_over():
     """
     Function to print Game Over when user loose the game
     """
-    print(f"{colors.RED}  _____                        "
-          f"_____{colors.RESET}")
+    print(f"{Colors.RED}  _____                        "
+          f"_____{Colors.RESET}")
     print(
-        f"{colors.RED} | |  \/ __ _ _ __ ___   ___  | | | |_   "
-        f"_____ _ __{colors.RESET}"
+        f"{Colors.RED} | |  \/ __ _ _ __ ___   ___  | | | |_   "
+        f"_____ _ __{Colors.RESET}"
     )
     print(
-        f"{colors.RED} | | __ / _` | '_ ` _ \ / _ \ | | | \ \ "
-        f"/ / _ \ '__|{colors.RESET}"
+        f"{Colors.RED} | | __ / _` | '_ ` _ \ / _ \ | | | \ \ "
+        f"/ / _ \ '__|{Colors.RESET}"
     )
     print(
-        f"{colors.RED} | |_\ \ (_| | | | | | |  __/ \ \_/ /\ V "
-        f"/  __/ |{colors.RESET}"
+        f"{Colors.RED} | |_\ \ (_| | | | | | |  __/ \ \_/ /\ V "
+        f"/  __/ |{Colors.RESET}"
     )
     print(
-        f"{colors.RED}  \____/\__,_|_| |_| |_|\___|  \___/  \_/ "
-        f"\___|_|{colors.RESET}"
+        f"{Colors.RED}  \____/\__,_|_| |_| |_|\___|  \___/  \_/ "
+        f"\___|_|{Colors.RESET}"
     )
     print("\n")
 
