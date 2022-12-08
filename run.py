@@ -119,7 +119,7 @@ def play(random_word):
     print(word_to_guess)
     print("\n")
     while not guessed and lives > 0:
-        guess = input("Please guess a letter or a word: ").upper()
+        guess = input("Please guess a letter or a word:\n").upper()
         if len(guess) == 1 and guess.isalpha():
             os.system('clear')
             if guess in guessed_letters:
@@ -193,7 +193,7 @@ def play_again():
     if user enter N, thank you message is displayed and program exit
     """
     while True:
-        choice = input("Play again? (Y/N): ").upper()
+        choice = input("Play again? (Y/N):\n").upper()
         if choice == "Y":
             random_word = get_word()
             play(random_word)
