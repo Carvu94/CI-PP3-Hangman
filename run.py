@@ -121,6 +121,7 @@ def play(random_word):
             os.system('clear')
             if guess in guessed_letters:
                 print(f"You already guessed letter {guess}")
+                print(f"You have already guessed: {guessed_letters}")
             elif guess not in random_word:
                 os.system('clear')
                 print(
@@ -158,6 +159,7 @@ def play(random_word):
         else:
             os.system('clear')
             print(f"{colors.RED}Not a valid guess{colors.RESET}")
+            print(f"You have already guessed: {guessed_letters}")
         print(print_hangman(lives))
         print(f"{colors.GREEN}You have {lives} lives left{colors.RESET}")
         print(word_to_guess)
