@@ -12,48 +12,59 @@ Users have 10 tries to guess the word before they are "hanged"..
 ## How to play
 <hr>
 
-Users play Hanfman by inputting commands in terminal. The aim of the game is to guess the hidden word. Hidden word is represented with underscores to indicate how many letters are in word. When user guess the letter correctly, the underscore is replaced with the correct letter. The user has 10 lives to start with and each stage is represented with graphics of a hangman. When the user guesses the word or looses all lives there is a option to play again. 
-
-### User Goals
-
-
-### Site Owner Goals
-
-
+Users play Hangman by inputting commands in terminal. The aim of the game is to guess the hidden word. Hidden word is represented with underscores to indicate how many letters are in word. When user guess the letter correctly, the underscore is replaced with the correct letter. The user has 10 lives to start with and each stage is represented with graphics of a hangman. When the user guesses the word or looses all lives there is a option to play again. 
 
 ## User Experience
 
-### Target Audience
-
-
-
-
-### User Requirements and Expectations
-
-
-### User Manual
-<hr>
-
-#### Overview
+1. User wants to have an idea of what the program is about
+2. User wants to be guided and informed how to make valid inputs
+3. User wants to have a clear feedback from inputs
+4. User wants to have option to exti the program
 
 [Back to Table Of Contents](#table-of-contents)
 
-## User Stories
+# Features
 <hr>
 
-### Users
+## Existing Features
 
-1. I want to have an idea of what the program is about
+- Introduction section
 
-### Site Owner
- 
-1. I want user to easily and intuitively navigate troughout program
-2. I want user to be guided and informed how to make valid inputs
-3. I want user to have clear feedback from  inputs
-4. I want user to have the option to exit the program
+    - Once the user runs the program, Hangman graphic is displayed and user is asked to enter the name. In case user enters invalid input, user is instructed to enter a name using letters only. 
 
+![Intro Section](/docs/intro-section.png)
+![Invalid Name](/docs/invalid-name.png)
 
-[Back to Table Of Contents](#table-of-contents)
+- Welcome and Menu section
+
+    - Once user enters valid name, he is welcomed to Hangman and asked to choose between playing the game or reading the rules. 
+
+![Welcome and Menu](/docs/welcome-and-menu.png)
+
+- Rules 
+
+    - If user choose rules option, rules are printed and user is asked to press 'Enter' when ready to go back on the menu. 
+
+![Rules](/docs/rules.png)
+
+- Play game
+
+    - When user choose play game option, the game is starting. Random word is generated and displayed and the hangman is displayed depending on number of lives left. 
+    - User is asked to guess a letter or a word. In case user enter invalid input, user is warned and asked again to guess a letter or a word. 
+    - If user guess is correct, the user will get the feedback and letter will be displayed instead of underscore. 
+    - If user guess is incorrect, the user will get the feedback. 
+    - All user guessess will be displayed on the top of screen. 
+    - In case user enter same input two times, the message will be displayed and user will be asked for another input.
+
+![Play Game](/docs/start-game.png)
+
+![Invalid Guess](/docs/not-valid-guess.png)
+
+![Correct Guess](/docs/correct-guess.png)
+
+![Wrong Guess](/docs/wrong-guess.png)
+
+![Already Guessed](/docs/already-guessed.png\)
 
 ## Technical Design
 <hr>
@@ -62,6 +73,7 @@ Users play Hanfman by inputting commands in terminal. The aim of the game is to 
 
  - This Flowchart created using Lucid chart summarises the structure and logic of the application.
 
+![Hangman Lucidchart](/docs/the_hangman_lucid.png)
 
 ### Data models
 <hr>
