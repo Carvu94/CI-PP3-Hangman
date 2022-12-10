@@ -213,7 +213,7 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 
 ### Code
 
-- [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create program title
+- [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create program title, you win and game over art
 - Code Institute -  "Love Sandwiches - Essentials Project
 
 ## Acknowledgements
