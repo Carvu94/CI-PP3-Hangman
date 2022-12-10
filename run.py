@@ -81,15 +81,6 @@ def game_rules():
     print("Good luck!")
 
 
-# def get_word():
-#     """Get a random word and return
-
-#     Returns:
-#         string, random word
-#     """
-#     with open("words.json", "r") as f:
-#         word = json.load(f)
-#     return random.choice(word).upper()p
 def get_word():
     """
     Get a random word and return
@@ -110,7 +101,6 @@ def play(random_word):
     guessed_words = []
     lives = 10
     os.system('clear')
-    # print(random_word)
     print("Welcome to The Hangman! \nLet's play!")
     print(print_hangman(lives))
     print(f"{Colors.GREEN}You have {lives} lives left{Colors.RESET}")
