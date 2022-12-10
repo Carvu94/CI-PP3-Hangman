@@ -10,25 +10,24 @@ Users have 10 tries to guess the word before they are "hanged".
 [THE HANGMAN >>> Live live website ](https://ci-pp3-the-hangman.herokuapp.com/)
 
 ## Table of Contents
-[**How to Play**](#how-to-play)
-[**User Experience**](#user-experience)
-[**Features**](#features)
-    [Existing Features](#existing-features)
-    [Future Features](#future-features)
-[**Technical Design**](#technical-design)
-    [Flowchart](#flowchart)
-[**Technologies Used**](#technologies-used)
-    [Frameworks & Tools](#frameworks--tools)
-[**Validation**](#validation)
-    [Testing](#testing)
-[**Bugs**](#bugs)
-    [Solved Bugs](#solved-bugs)
-    [Remaining Bugs](#remaining-bugs)
-[**Deployment**](#deployment)
-[**Credits**](#credits)
+- [**How to Play**](#how-to-play)
+- [**User Experience**](#user-experience)
+- [**Features**](#features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#future-features)
+- [**Technical Design**](#technical-design)
+    - [Flowchart](#flowchart)
+- [**Technologies Used**](#technologies-used)
+    - [Frameworks & Tools](#frameworks--tools)
+- [**Validation**](#validation)
+    - [Testing](#testing)
+- [**Bugs**](#bugs)
+    - [Solved Bugs](#solved-bugs)
+    - [Remaining Bugs](#remaining-bugs)
+- [**Deployment**](#deployment)
+- [**Credits**](#credits)
 
 ## How to play
-<hr>
 
 Users play Hangman by inputting commands in terminal. The aim of the game is to guess the hidden word. Hidden word is represented with underscores to indicate how many letters are in word. When user guess the letter correctly, the underscore is replaced with the correct letter. The user has 10 lives to start with and each stage is represented with graphics of a hangman. When the user guesses the word or looses all lives there is a option to play again. 
 
@@ -42,7 +41,6 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 [Back to Table Of Contents](#table-of-contents)
 
 # Features
-<hr>
 
 ## Existing Features
 
@@ -112,7 +110,6 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 - Different levels of difficulty
 
 ## Technical Design
-<hr>
 
 ### Flowchart
 
@@ -123,7 +120,6 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 [Back to Table Of Contents](#table-of-contents)
 
 ## Technologies Used
-<hr>
 
 - Languages:
     - Python
@@ -146,7 +142,6 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 [Back to Table Of Contents](#table-of-contents)
 
 ## Validation
-<hr>
 
 ## Testing
 
@@ -178,7 +173,7 @@ The testing approach is as follows:
 
 ## Remaining Bugs
 
-    - No bugs remaining
+- No bugs remaining
 
 ## Deployment
 
@@ -187,43 +182,16 @@ The testing approach is as follows:
 The Application has been deployed from GitHub to Heroku by following the steps:
 
 1. Create or log in to your account at heroku.com
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-login.png">
-    </details>
-
-2. Create a new app, add a unique app name ( for example PP3_The_Coach) and then choose your region
+2. Create a new app, add a unique app name and then choose your region
 3. Click on create app
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-new-app.png">
-    </details>
-
 4. Go to "Settings"
-5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-conf-var.png">
-    </details>
-
+5. Add a key 'PORT' and value '8000'.
 6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-buildpack.png">
-    </details>
-
 7. Go to "Deploy" and select "GitHub" in "Deployment method"
 8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-deploy.png">
-    </details>
-
 9.  Choose the branch you want to buid your app from
 10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-branch-deploy.png">
-    </details>
-
 11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
-    <details><summary>Screenshot</summary>
-    <img src="docs/deployment/heroku-end.png">
-    </details>
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
@@ -252,6 +220,6 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 
 - Special Thanks to my mentor
 - Thanks to my girlfriend, family and friends for support
-- Thanks to Code Institute
+- Thanks to Code Institute and fellow students on Slack channels 
 
 [Back to Table Of Contents](#table-of-contents)
