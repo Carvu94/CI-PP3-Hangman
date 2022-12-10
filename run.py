@@ -309,16 +309,16 @@ def print_title():
         f"___   __ _ _ __{Colors.RESET}"
     )
     print(
-        f"{Colors.CYAN}     | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ ` "
-        f"_ \ / _` | '_ \ {Colors.RESET}"
+        rf"{Colors.CYAN}     | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ `"
+        rf" _ \ / _` | '_ \ {Colors.RESET}"
     )
     print(
         f"{Colors.CYAN}     | |  | | | |  __/ | |  | | (_| | | | | (_| | | | "
         f"| | | (_| | | | |{Colors.RESET}"
     )
     print(
-        f"{Colors.CYAN}     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_"
-        f"| |_|\__,_|_| |_|{Colors.RESET}"
+        rf"{Colors.CYAN}     |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_"
+        rf"| |_|\__,_|_| |_|{Colors.RESET}"
     )
     print(
         f"{Colors.CYAN}                                            __/ "
@@ -335,11 +335,11 @@ def you_win():
     Function to print You Win when user wins the game
     """
     print(f"{Colors.GREEN}__   __            _    _ _{Colors.RESET}")
-    print(f"{Colors.GREEN}\ \ / /           | |  | (_){Colors.RESET}")
-    print(f"{Colors.GREEN} \ V /___  _   _  | |  | |_ _ __{Colors.RESET}")
-    print(f"{Colors.GREEN}  \ // _ \| | | | | |/\| | | '_ \ {Colors.RESET}")
-    print(f"{Colors.GREEN}  | | (_) | |_| | \  /\  / | | | |{Colors.RESET}")
-    print(f"{Colors.GREEN}  \_/\___/ \__,_|  \/  \/|_|_| |_|{Colors.RESET}")
+    print(rf"{Colors.GREEN}\ \ / /           | |  | (_){Colors.RESET}")
+    print(rf"{Colors.GREEN} \ V /___  _   _  | |  | |_ _ __{Colors.RESET}")
+    print(rf"{Colors.GREEN}  \ // _ \| | | | | |/\| | | '_ \ {Colors.RESET}")
+    print(rf"{Colors.GREEN}  | | (_) | |_| | \  /\  / | | | |{Colors.RESET}")
+    print(rf"{Colors.GREEN}  \_/\___/ \__,_|  \/  \/|_|_| |_|{Colors.RESET}")
     print("\n")
 
 
@@ -350,20 +350,20 @@ def game_over():
     print(f"{Colors.RED}  _____                        "
           f"_____{Colors.RESET}")
     print(
-        f"{Colors.RED} | |  \/ __ _ _ __ ___   ___  | | | |_   "
+        rf"{Colors.RED} | |  \/ __ _ _ __ ___   ___  | | | |_   "
         f"_____ _ __{Colors.RESET}"
     )
     print(
-        f"{Colors.RED} | | __ / _` | '_ ` _ \ / _ \ | | | \ \ "
-        f"/ / _ \ '__|{Colors.RESET}"
+        rf"{Colors.RED} | | __ / _` | '_ ` _ \ / _ \ | | | \ \ "
+        rf"/ / _ \ '__|{Colors.RESET}"
     )
     print(
-        f"{Colors.RED} | |_\ \ (_| | | | | | |  __/ \ \_/ /\ V "
+        rf"{Colors.RED} | |_\ \ (_| | | | | | |  __/ \ \_/ /\ V "
         f"/  __/ |{Colors.RESET}"
     )
     print(
-        f"{Colors.RED}  \____/\__,_|_| |_| |_|\___|  \___/  \_/ "
-        f"\___|_|{Colors.RESET}"
+        rf"{Colors.RED}  \____/\__,_|_| |_| |_|\___|  \___/  \_/ "
+        rf"\___|_|{Colors.RESET}"
     )
     print("\n")
 
