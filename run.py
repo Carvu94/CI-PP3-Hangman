@@ -3,8 +3,6 @@ import os
 from time import sleep
 from words import words
 
-# import json
-
 
 class Colors:
     """
