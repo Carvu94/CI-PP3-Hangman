@@ -3,11 +3,29 @@
 (Developer: Matej Car)
 The Hangman is Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 Users can try to guess the word by inputting a letter or whole word until they either guess the word or lose all lives. 
-Users have 10 tries to guess the word before they are "hanged"..
+Users have 10 tries to guess the word before they are "hanged".
 
-[THE HANGMAN >>> Live live website ]()
+![The Hangman](/docs/am-i-responsive.png)
+
+[THE HANGMAN >>> Live live website ](https://ci-pp3-the-hangman.herokuapp.com/)
 
 ## Table of Contents
+[**How to Play**](#how-to-play)
+[**User Experience**](#user-experience)
+[**Features**](#features)
+    [Existing Features](#existing-features)
+    [Future Features](#future-features)
+[**Technical Design**](#technical-design)
+    [Flowchart](#flowchart)
+[**Technologies Used**](#technologies-used)
+    [Frameworks & Tools](#frameworks--tools)
+[**Validation**](#validation)
+    [Testing](#testing)
+[**Bugs**](#bugs)
+    [Solved Bugs](#solved-bugs)
+    [Remaining Bugs](#remaining-bugs)
+[**Deployment**](#deployment)
+[**Credits**](#credits)
 
 ## How to play
 <hr>
@@ -54,7 +72,7 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
     - If user guess is correct, the user will get the feedback and letter will be displayed instead of underscore. 
     - If user guess is incorrect, the user will get the feedback. 
     - All user guessess will be displayed on the top of screen. 
-    - In case user enter same input two times, the message will be displayed and user will be asked for another input.
+    - In case user enter same input two or more times, the message will be displayed and user will be asked for another input.
 
 ![Play Game](/docs/start-game.png)
 
@@ -64,7 +82,34 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 
 ![Wrong Guess](/docs/wrong-guess.png)
 
-![Already Guessed](/docs/already-guessed.png\)
+![Already Guessed](/docs/already-guessed.png)
+
+- You Win
+
+    - When user guess correctly whole word, user wins and the message is displayed with option to play again.
+
+![You Win](/docs/you-win.png)
+
+- Game Over
+
+    - If user runs out of lives and do not guess the word correctly, user loose and the message is displayed with option to play again. 
+
+![Game Over](/docs/game-over.png)
+
+- Play Again
+
+    - When user wins or loose, user can choose to play again or not. 
+    - If user choose to play again, new word is generated and game starts again. 
+    - If user choose not to play again, thank you message is displayed and the program exits. 
+
+![Not Play Again](/docs/not-play-again.png)
+
+[Back to Table Of Contents](#table-of-contents)
+
+## Future Features
+
+- Highscore
+- Different levels of difficulty
 
 ## Technical Design
 <hr>
@@ -75,44 +120,30 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 
 ![Hangman Lucidchart](/docs/the_hangman_lucid.png)
 
-### Data models
-<hr>
+[Back to Table Of Contents](#table-of-contents)
 
 ## Technologies Used
 <hr>
 
-### Languages
+- Languages:
+    - Python
 
+- Libraries:
+    - Random to select a random word
+    - os to clear the terminal
 
-- [Python](https://www.python.org/) programming language for the logic of the program
+- Other:
+    - words.py - A list of words taken from (https://www.randomlists.com/data/words.json)
 
 ### Frameworks & Tools
 
 - [Lucidchart](https://www.lucidchart.com/) was used to draw a program flowchart
-
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Heroku Platform](https://dashboard.heroku.com/) was used to deploy the project into live environment
-- [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
-
-### Libraries
-
-#### Python Libraries
-- random - used to generate random player values inside given parameters
-
-#### Third Party Libraries
+- [Am I Responsive](https://ui.dev/amiresponsive) was used to create Am I Responsive image and check responsivnes
 
 [Back to Table Of Contents](#table-of-contents)
-
-## Features
-<hr>
-
-[Back to Table Of Contents](#table-of-contents)
-
-## Future features to implement
-
-<hr>
-
 
 ## Validation
 <hr>
@@ -120,16 +151,34 @@ Users play Hangman by inputting commands in terminal. The aim of the game is to 
 ## Testing
 
 The testing approach is as follows:
-1. Manual testing of user stories
+1. Manual testing correct and incorrect user inputs
 2. Automated unit testing using the Python unittest library
+3. Tested through CI PEP8 Linter (https://pep8ci.herokuapp.com/). 
+    - No errors were returned.
 
-### Manual Testing
-<hr>
+[Back to Table Of Contents](#table-of-contents)
 
-### Automated Testing
-<hr>
+# Bugs
 
-## Bugs
+## Solved Bugs
+
+- When game started, under displayed hangman, 'None' was printed. This bug was fixed by adjusting print statement for random word.
+
+![None](/docs/'none'.png)
+
+- On several occasions I was encountering 'line too long' error which was fixed by breaking the code in more lines. 
+
+![Line Too Long](/docs/line-too-long.png)
+
+- When asked if user wants to play again and invalid input was entered, the program extied. This bug was fixed by adjusting the funciton.
+
+![Wrong Input](/docs/wrong_input.png)
+
+[Back to Table Of Contents](#table-of-contents)
+
+## Remaining Bugs
+
+    - No bugs remaining
 
 ## Deployment
 
@@ -197,8 +246,12 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 ### Code
 
 - [ASCII Art Generator](http://patorjk.com/software/taag/) was used to create program title
-
-- Code Institute -  "Love Sandwiches - Essentials Project" walkthrough helped me to connect  Google Spreadsheet to my project.
-
+- Code Institute -  "Love Sandwiches - Essentials Project
 
 ## Acknowledgements
+
+- Special Thanks to my mentor
+- Thanks to my girlfriend, family and friends for support
+- Thanks to Code Institute
+
+[Back to Table Of Contents](#table-of-contents)
