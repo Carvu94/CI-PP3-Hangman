@@ -91,7 +91,7 @@ def game_rules():
 #     """
 #     with open("words.json", "r") as f:
 #         word = json.load(f)
-#     return random.choice(word).upper()
+#     return random.choice(word).upper()p
 def get_word():
     """
     Get a random word and return
@@ -144,7 +144,10 @@ def play(random_word):
                 print(f"You have already guessed: "
                       f"{', '.join(str(x) for x in guessed_letters)}")
                 word_list = list(word_to_guess)
-                indices = [i for i, letter in enumerate(random_word) if letter == guess]
+                indices = [
+                    i for i,
+                    letter in enumerate(random_word)
+                    if letter == guess]
                 for index in indices:
                     word_list[index] = guess
                 word_to_guess = "".join(word_list)
